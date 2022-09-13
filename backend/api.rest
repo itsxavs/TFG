@@ -1,0 +1,27 @@
+###
+GET http://localhost:5000/posts HTTP/1.1
+
+###
+POST http://localhost:5000/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Mensaje para todos",
+    "message": "pues bueno esto es el mensaje de prueba",
+    "creator": "Javier",
+    "tags":"mekmaths",
+    "selectedFile": "maths02",
+    "likeCount": 0,
+    "createdAt": "Wed, 21 Oct 2015 07:28:00 GMT"
+}
+
+###
+POST http://localhost:5000/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "javitoo.lol@gmail.com",
+    "password": "mek12",
+    "firstName": "Javier",
+    "lastName": "Carrasco"
+}

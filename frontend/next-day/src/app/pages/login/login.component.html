@@ -1,0 +1,32 @@
+<div class="login__container">
+  <form [formGroup]="form" class="login__items">
+    <div class="login__header">
+      <span>{{header}}</span>
+    </div>
+    <div class="login__input">
+      <label>Email</label>
+      <input formControlName="email">
+    </div>
+    <div class="login__input">
+      <label>Password</label>
+      <input type="password" formControlName="password">
+    </div>
+    <div *ngIf="!isLogin" class="login__input">
+      <label>FirstName</label>
+      <input formControlName="firstName">
+    </div>
+    <div *ngIf="!isLogin" class="login__input">
+      <label>SecondName</label>
+      <input formControlName="lastName">
+    </div>
+    <div *ngIf="!isLogin" class="login__input">
+      <label>Teacher
+      <input type="checkbox" formControlName="teacher">
+        </label>
+    </div>
+    <div class="login__input">
+      <button class="login__button login__button--login" type="button" name="login" (click)="login()">LOGIN</button>
+      <button class="login__button login__button--register" type="button" name="register" (click)="register()">REGISTER</button>
+    </div>
+  </form>
+</div>

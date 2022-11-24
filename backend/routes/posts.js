@@ -12,6 +12,8 @@ postRouter.get('/', post.getPosts);
 postRouter.post('/', post.createPost);
 // READ ONE
 postRouter.get('/:id', post.getPost);
+// Find posts of a user
+postRouter.get('/:id', post.getPostsByTeacherId)
 // UPDATE
 postRouter.put('/:id', post.editPost);
 //DELETE

@@ -1,21 +1,19 @@
 import mongoose from 'mongoose';
 
+
 const teacherSchema = mongoose.Schema({
-  id: {
+  idUser: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
   },
-  name: String,
-  studentsId: {
-    type: Array,
+  students: [{
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Student',
-  },
-  logo: {
-    data: Buffer,
-    contentType: String,
-  },
-  type: String,
+  }],
+  classrooms: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Classroom',
+  }],
 });
-
 const Teacher = mongoose.model('Teacher', teacherSchema);
 export default Teacher;

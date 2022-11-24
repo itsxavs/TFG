@@ -24,18 +24,7 @@
   }
 
   &__button {
-    position: absolute;
-    height: 80px;
-    width: 216px;
-    border: 8px solid aqua;
-    &--login {
-      left: 0px;
-      border-radius: 0 0 0 12px;
-    }
-    &--register {
-      right: 0px;
-      border-radius: 0 0 12px 0;
-    }
+
   }
 
   &__header {
@@ -48,5 +37,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;
+  }
+
+  &a:hover {
+    color: red
   }
 }
